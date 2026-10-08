@@ -31,7 +31,7 @@ The product follows the user's actual task: **see → select → interpret → w
 
 ## Quick start / 快速上手
 
-**[Download v0.1.1 extension ZIP](https://github.com/LydiaTools/notesignal/releases/download/v0.1.1/notesignal-v0.1.1.zip)** · [Release notes](https://github.com/LydiaTools/notesignal/releases/tag/v0.1.1)
+**[Download v0.1.1 extension ZIP](https://github.com/LydiaTools/notesignal/releases/download/v0.1.1/notesignal-v0.1.1.zip)** · [Release notes](https://github.com/LydiaTools/notesignal/releases/tag/v0.1.1) · [Share a real use result](https://github.com/LydiaTools/notesignal/issues/new?template=use-feedback.yml)
 
 This is an early preview. The local fixture workflow has been tested. The published ZIP passed a [real-browser Chromium smoke run](https://github.com/LydiaTools/notesignal/actions/runs/37785360648): hash check, extension load, popup, Chinese preference persistence, and stopping on a non-note page. Live signed-in Xiaohongshu capture has not yet been accepted on a user account.
 

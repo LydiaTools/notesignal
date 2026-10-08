@@ -1,0 +1,47 @@
+name: "Use feedback / 使用反馈"
+description: "Report what happened in a real NoteSignal workflow / 反馈笔记风向标的实际使用结果"
+title: "[Feedback] "
+body:
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: "Workflow / 使用方式"
+      options:
+        - "Manual Chrome extension / 手动插件"
+        - "Optional visible-browser runner / 可见浏览器脚本"
+        - "Installation or setup / 安装配置"
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: "What happened? / 实际结果"
+      options:
+        - "A note was saved / 已保存笔记"
+        - "Visible text or metrics were incomplete / 可见文本或指标不完整"
+        - "The workflow stopped before saving / 保存前停止"
+        - "Export or import needs attention / 导出或导入有问题"
+        - "Other / 其他"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps and observed result / 操作步骤与实际结果"
+      description: "Describe the page type, action and result. A public source link is optional. / 写明页面类型、操作和结果；公开来源链接可选。"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected result / 预期结果"
+  - type: input
+    id: environment
+    attributes:
+      label: "Browser, OS and version / 浏览器、系统与版本"
+      placeholder: "e.g. Chrome on Windows, NoteSignal v0.1.1"
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Optional screenshot or public example / 可选截图或公开示例"
+      description: "Remove account details, cookies, keys and private draft text before sharing. / 分享前移除账号信息、Cookie、密钥和私密草稿。"

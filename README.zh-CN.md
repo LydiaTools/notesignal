@@ -8,7 +8,7 @@
 
 ## 安装
 
-**[下载 v0.1.1 插件 ZIP](https://github.com/LydiaTools/notesignal/releases/download/v0.1.1/notesignal-v0.1.1.zip)** · [查看版本说明](https://github.com/LydiaTools/notesignal/releases/tag/v0.1.1)
+**[下载 v0.1.1 插件 ZIP](https://github.com/LydiaTools/notesignal/releases/download/v0.1.1/notesignal-v0.1.1.zip)** · [查看版本说明](https://github.com/LydiaTools/notesignal/releases/tag/v0.1.1) · [反馈真实使用结果](https://github.com/LydiaTools/notesignal/issues/new?template=use-feedback.yml)
 
 当前是早期预览版。本地模拟页面流程已测试。公开 ZIP 已通过[真实 Chromium 浏览器冒烟测试](https://github.com/LydiaTools/notesignal/actions/runs/37785360648)：校验包哈希、加载插件、打开弹窗、弹窗重载后保留中文设置，并在非笔记页停止采集。登录账号后的真实小红书采集尚未验收。
 
