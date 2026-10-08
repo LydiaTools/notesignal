@@ -1,0 +1,35 @@
+name: Smoke released Chrome extension
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release-popup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated Playwright Chromium
+        run: |
+          mkdir -p "$RUNNER_TEMP/notesignal-smoke"
+          cp tests/extension-browser-smoke.mjs "$RUNNER_TEMP/notesignal-smoke/"
+          cd "$RUNNER_TEMP/notesignal-smoke"
+          npm init -y >/dev/null
+          npm install --no-save --no-package-lock playwright@1.62.1
+          npx playwright install --with-deps chromium --no-shell
+      - name: Download and verify public v0.1.1 ZIP
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/notesignal-release"
+          gh release download v0.1.1 --repo "$GITHUB_REPOSITORY" --pattern notesignal-v0.1.1.zip --dir "$RUNNER_TEMP/notesignal-release"
+          printf '%s  %s\n' '8a1956e670663dd0e4b3a5258e064e4f728f4644f128f2c5cd823bffe4137e6e' "$RUNNER_TEMP/notesignal-release/notesignal-v0.1.1.zip" | sha256sum --check
+          unzip -q "$RUNNER_TEMP/notesignal-release/notesignal-v0.1.1.zip" -d "$RUNNER_TEMP/notesignal-release"
+      - name: Open the released extension in a real browser
+        run: node "$RUNNER_TEMP/notesignal-smoke/extension-browser-smoke.mjs" "$RUNNER_TEMP/notesignal-release/notesignal-v0.1.1"
