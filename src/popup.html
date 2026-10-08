@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NoteSignal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header class="mast"><div class="mark">N<span>·</span>S</div><div class="identity"><strong>NoteSignal</strong><small id="subtitle"></small></div><button id="lang" class="text-button" aria-label="Switch language">中文</button></header>
+    <nav aria-label="Sections"><button data-tab="capture" class="active" id="tab-capture"></button><button data-tab="library" id="tab-library"></button><button data-tab="brief" id="tab-brief"></button></nav>
+    <section id="capture" class="panel">
+      <div class="hero"><span class="rule"></span><h1 id="hero-title"></h1><p id="hero-desc"></p></div>
+      <div class="step"><b>1</b><span id="step-open"></span></div>
+      <div class="step"><b>2</b><span id="step-capture"></span></div>
+      <button id="capture-button" class="primary"></button>
+      <p id="status" role="status" aria-live="polite"></p>
+      <button id="resume-button" class="secondary" type="button" hidden></button>
+      <div class="search-tool"><p id="search-intro"></p><button id="search-button" class="secondary" type="button"></button><div id="search-results" aria-live="polite"></div></div>
+      <form id="editor" hidden>
+        <label><span id="label-title"></span><input id="note-title" maxlength="180" required></label>
+        <label><span id="label-author"></span><input id="note-author" maxlength="100"></label>
+        <label><span id="label-excerpt"></span><textarea id="note-excerpt" rows="5" maxlength="1800"></textarea></label>
+        <label><span id="label-metrics"></span><input id="note-metrics" maxlength="300"></label>
+        <label><span id="label-insight"></span><textarea id="note-insight" rows="3" maxlength="600"></textarea></label>
+        <button class="primary" id="save-button" type="submit"></button>
+      </form>
+      <p class="fine" id="safety-note"></p>
+    </section>
+    <section id="library" class="panel" hidden><div class="panel-heading"><h1 id="library-title"></h1><span id="count"></span></div><div id="notes"></div><div class="actions"><button id="export-csv"></button><button id="export-json"></button><button id="import-json"></button><input id="import-file" type="file" accept=".json,application/json" hidden></div><p id="library-status" role="status" aria-live="polite"></p></section>
+    <section id="brief" class="panel" hidden><div class="panel-heading"><h1 id="brief-title"></h1></div><p id="brief-intro"></p><div id="brief-content"></div><button id="copy-brief" class="primary"></button></section>
+    <footer><span id="footer-text"></span><a href="https://github.com/LydiaTools/notesignal" target="_blank" rel="noreferrer">GitHub</a></footer>
+  </main>
+  <script src="core.js"></script><script src="popup.js"></script>
+</body>
+</html>
