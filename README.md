@@ -31,7 +31,11 @@ The product follows the user's actual task: **see → select → interpret → w
 
 ## Quick start / 快速上手
 
-1. Download the source or the release ZIP and unzip it.
+**[Download v0.1.1 extension ZIP](https://github.com/LydiaTools/notesignal/releases/download/v0.1.1/notesignal-v0.1.1.zip)** · [Release notes](https://github.com/LydiaTools/notesignal/releases/tag/v0.1.1)
+
+This is an early preview. The local fixture workflow has been tested; live signed-in capture has not yet been accepted on a user account.
+
+1. Download and unzip the extension ZIP. Open the included `notesignal-v0.1.1` folder.
 2. Open `chrome://extensions`, enable **Developer mode**, choose **Load unpacked**, and select the folder containing `manifest.json`.
 3. Open a Xiaohongshu search page and use **Review visible results** to choose a note, or open a note yourself.
 4. On that note, click the NoteSignal icon, then **Capture current note**. Keep the tab visible while it pauses and scrolls once.

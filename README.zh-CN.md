@@ -8,7 +8,11 @@
 
 ## 安装
 
-1. 下载并解压本仓库或 Release 中的 ZIP。
+**[下载 v0.1.1 插件 ZIP](https://github.com/LydiaTools/notesignal/releases/download/v0.1.1/notesignal-v0.1.1.zip)** · [查看版本说明](https://github.com/LydiaTools/notesignal/releases/tag/v0.1.1)
+
+当前是早期预览版。本地模拟页面流程已测试，登录账号的真实采集尚未验收。
+
+1. 下载并解压插件 ZIP，打开其中的 `notesignal-v0.1.1` 文件夹。
 2. 打开 Chrome 的 `chrome://extensions`，开启「开发者模式」。
 3. 点击「加载已解压的扩展程序」，选择含有 `manifest.json` 的文件夹。
 4. 登录自己的小红书账号。可先在搜索页点「查看当前可见结果」，自行选一篇打开；也可直接打开一篇笔记。
