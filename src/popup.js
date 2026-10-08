@@ -1,6 +1,6 @@
 const STRINGS = {
   en: {
-    subtitle:'Research from the page you can see',capture:'Capture',library:'Library',brief:'Brief',
+    brandName:'Xiaohongshu NoteSignal',subtitle:'Research from the page you can see',capture:'Capture',library:'Library',brief:'Brief',
     hero:'One page. One deliberate capture.',desc:'Collect a visible Xiaohongshu note into your private research library.',
     open:'Open a note in your signed-in browser.',doCapture:'Review and save only this page.',
     captureButton:'Capture current note',title:'Title',author:'Author',excerpt:'Visible excerpt',metrics:'Visible metrics (check on page)',insight:'Why does this work? Add your own observation.',save:'Save to library',
@@ -14,7 +14,7 @@ const STRINGS = {
     briefHead:'Topic signals from saved notes',briefItem:'Source',briefAngle:'Your observation',briefEnd:'Next: compare audience, hook, proof, and your original angle. Do not copy source text into a post.'
   },
   zh: {
-    subtitle:'从你看得到的页面做研究',capture:'采集',library:'资料库',brief:'选题简报',
+    brandName:'小红书笔记风向标',subtitle:'从你看得到的页面做研究',capture:'采集',library:'资料库',brief:'选题简报',
     hero:'一页一次，主动采集。',desc:'把当前可见的小红书笔记存进本地研究资料库。',
     open:'先在已登录浏览器打开一篇笔记。',doCapture:'核对当前页，再决定是否保存。',
     captureButton:'采集当前笔记',title:'标题',author:'作者',excerpt:'可见内容摘录',metrics:'页面可见指标（请核对）',insight:'它为什么有效？写下你的判断。',save:'保存到资料库',
@@ -34,7 +34,7 @@ const t=(key,vars={})=>Object.entries(vars).reduce((s,[k,v])=>s.replace('{'+k+'}
 async function readState(){const data=await chrome.storage.local.get(['lang','notes','history','halted']);lang=data.lang||'en';notes=data.notes||[];history=data.history||[];halted=!!data.halted;render();}
 function render(){
   document.documentElement.lang=lang; $('lang').textContent=lang==='en'?'中文':'English';
-  const ids={subtitle:'subtitle','tab-capture':'capture','tab-library':'library','tab-brief':'brief','hero-title':'hero','hero-desc':'desc','step-open':'open','step-capture':'doCapture','capture-button':'captureButton','resume-button':'resume','label-title':'title','label-author':'author','label-excerpt':'excerpt','label-metrics':'metrics','label-insight':'insight','save-button':'save','search-intro':'searchIntro','search-button':'searchButton','safety-note':'safety','library-title':'libraryTitle','brief-title':'briefTitle','brief-intro':'briefIntro','copy-brief':'copy','export-csv':'exportCsv','export-json':'exportJson','import-json':'importJson','footer-text':'footer'};
+  const ids={'brand-name':'brandName',subtitle:'subtitle','tab-capture':'capture','tab-library':'library','tab-brief':'brief','hero-title':'hero','hero-desc':'desc','step-open':'open','step-capture':'doCapture','capture-button':'captureButton','resume-button':'resume','label-title':'title','label-author':'author','label-excerpt':'excerpt','label-metrics':'metrics','label-insight':'insight','save-button':'save','search-intro':'searchIntro','search-button':'searchButton','safety-note':'safety','library-title':'libraryTitle','brief-title':'briefTitle','brief-intro':'briefIntro','copy-brief':'copy','export-csv':'exportCsv','export-json':'exportJson','import-json':'importJson','footer-text':'footer'};
   for(const [id,key] of Object.entries(ids)) $(id).textContent=t(key);
   $('resume-button').hidden=!halted;
   if(halted)showStatus('halted');

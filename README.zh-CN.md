@@ -1,8 +1,8 @@
-# 笔记风向标 NoteSignal
+# 小红书笔记风向标 · NoteSignal
 
 一款本地运行的小红书选题研究插件。它把「看见一篇笔记 → 主动采集 → 核对内容 → 写下自己的判断 → 汇总选题」做成短流程。
 
-![笔记风向标实际插件界面，空资料库状态](docs/screenshots/popup-empty.png)
+![小红书笔记风向标实际中文插件界面，空资料库状态](docs/screenshots/popup-empty-zh.png)
 
 截图是插件真实界面的空资料库状态，不代表已完成小红书实测采集。
 

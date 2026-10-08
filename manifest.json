@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "NoteSignal · 笔记风向标",
+  "name": "小红书笔记风向标 · Xiaohongshu NoteSignal",
   "description": "A local, user-triggered Xiaohongshu research notebook. 本地逐页采集与选题分析。",
-  "version": "0.1.0",
-  "action": { "default_popup": "src/popup.html", "default_title": "NoteSignal" },
+  "version": "0.1.1",
+  "action": { "default_popup": "src/popup.html", "default_title": "小红书笔记风向标 · NoteSignal" },
   "permissions": ["activeTab", "scripting", "storage"],
   "icons": { "128": "icon.png" }
 }
