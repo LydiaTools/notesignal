@@ -1,4 +1,4 @@
-# Xiaohongshu NoteSignal · 小红书笔记风向标
+# Xiaohongshu NoteSignal
 
 **A deliberate Xiaohongshu research notebook, one visible page at a time.**
 
